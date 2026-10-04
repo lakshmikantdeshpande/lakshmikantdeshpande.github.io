@@ -640,18 +640,33 @@ svg {
   gap: 60px;
   margin-top: 86px;
 }
+.prose .workbench {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding: 32px 28px;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
 .workbench .eyebrow {
   font-size: 8px;
   letter-spacing: 1.45px;
   color: #ccbdcf;
 }
-.workbench h2 {
+.workbench h2,
+.workbench h3 {
+  font-family: var(--display);
   font-size: 49px;
   line-height: 1.08;
   letter-spacing: -0.5px;
   margin-top: 22px;
+  color: #f2edf2;
 }
-.workbench h2 em {
+.prose .workbench h3 {
+  font-size: 36px;
+  margin-top: 12px;
+}
+.workbench h2 em,
+.workbench h3 em {
   color: #cdb5d4;
 }
 .workbench-copy > p {

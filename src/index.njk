@@ -2,19 +2,71 @@
 layout: layouts/base.njk
 ---
 <section class="hero">
-  <div class="eyebrow"><span class="status-dot"></span> SOFTWARE ENGINEER & CURIOUS BUILDER</div>
-  <h1>Useful software.<br>A little more <span class="hero-last-word"><em>human.</em><span class="hero-asterisk" aria-hidden="true">✳</span></span></h1>
-  <div class="hero-bottom"><p>I’m Lakshmikant. I build dependable systems, small apps,<br class="desktop-break"> and things that make everyday life a little easier.</p><a class="text-link" href="#selected-work">Explore my work <span aria-hidden="true">↓</span></a></div>
-  <div class="hero-footnote"><span>Based in Bengaluru, India</span><span>Building at PayPal · Experimenting everywhere</span></div>
+  <div class="eyebrow"><span class="status-dot"></span> SOFTWARE ENGINEER & BUILDER</div>
+  <h1>Engineering systems.<br>Crafting thoughtful <span class="hero-last-word"><em>tools.</em><span class="hero-asterisk" aria-hidden="true">✳</span></span></h1>
+  <div class="hero-bottom">
+    <p>I’m Lakshmikant Deshpande. Based in Bengaluru, I design backend and distributed systems at PayPal, and build small apps, utilities, and AI experiments in my free time.</p>
+    <a class="text-link" href="#selected-work">Explore selected work <span aria-hidden="true">↓</span></a>
+  </div>
+  <div class="hero-footnote">
+    <span>Staff Software Engineer @ PayPal</span>
+    <span>Bengaluru, India · Building & tinkering</span>
+  </div>
 </section>
+
 <section id="selected-work" class="section work-section">
-  <div class="section-heading"><div><span class="eyebrow section-number">01 / SELECTED WORK</span><h2>Ideas, out in the world.</h2></div><a class="text-link" href="/work/">All projects <span aria-hidden="true">↗</span></a></div>
-  <div class="project-grid">{% for project in collections.projects %}{% if project.data.featured %}{% include 'project-card.njk' %}{% endif %}{% endfor %}</div>
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow section-number">SELECTED PROJECTS</span>
+      <h2>Things I’ve built & shipped.</h2>
+    </div>
+    <a class="text-link" href="/work/">All projects <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="project-grid">
+    {% for project in collections.projects %}
+      {% if project.data.featured %}
+        {% include 'project-card.njk' %}
+      {% endif %}
+    {% endfor %}
+  </div>
 </section>
-<section class="workbench section" aria-labelledby="workbench-heading">
-  <div class="workbench-copy"><span class="eyebrow">A SMALL THING THAT WORKS</span><h2 id="workbench-heading">A link.<br><em>A little lighter.</em></h2><p>A tiny browser demo inspired by Clean My Links. Paste a URL and strip common tracking parameters before you share it.</p><a class="text-link" href="/work/clean-my-links/">Meet the app <span aria-hidden="true">↗</span></a></div>
-  <div class="demo-panel"><form id="cleaner-form" hidden><label for="url-input">GIVE IT A TRY</label><textarea id="url-input" name="url" rows="2" spellcheck="false" autocomplete="off" maxlength="8192" aria-describedby="cleaner-help" required>https://example.com/good-things?utm_source=newsletter&utm_medium=email</textarea><button class="clean-button" type="submit">Clean this link <span aria-hidden="true">✧</span></button><div class="clean-result" hidden><label for="url-output">READY TO SHARE</label><div class="output-row"><input id="url-output" readonly aria-label="Cleaned link"><button type="button" id="copy-link" aria-label="Copy cleaned link">Copy</button></div></div><p id="cleaner-status" class="demo-status" role="status" aria-live="polite"></p><p id="cleaner-help" class="demo-privacy">Stays in your browser. Nothing uploaded.</p></form><noscript><p>This little demo needs JavaScript. The rest of the site works without it.</p><a href="/work/clean-my-links/">Read about Clean My Links →</a></noscript></div>
+
+<section class="section writing-section">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow section-number">FIELD NOTES</span>
+      <h2>Thinking out loud.</h2>
+    </div>
+    <a class="text-link" href="/writing/">All writing <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="post-list">
+    {% for post in collections.posts %}
+      {% if loop.index <= 3 %}
+        {% include 'post-row.njk' %}
+      {% endif %}
+    {% else %}
+      <div class="writing-empty">
+        <p class="empty-heading">A notebook, just opened.</p>
+        <p>This is where notes on building software, exploring AI, and making small things useful will live. For now, the projects tell the story.</p>
+        <a class="text-link" href="/work/">Explore the projects <span aria-hidden="true">↗</span></a>
+      </div>
+    {% endfor %}
+  </div>
 </section>
-<section class="section writing-section"><div class="section-heading"><div><span class="eyebrow section-number">02 / FIELD NOTES</span><h2>Thinking out loud.</h2></div><a class="text-link" href="/writing/">All writing <span aria-hidden="true">↗</span></a></div><div class="post-list">{% for post in collections.posts %}{% if loop.index <= 3 %}{% include 'post-row.njk' %}{% endif %}{% else %}<div class="writing-empty"><p class="empty-heading">A notebook, just opened.</p><p>This is where notes on building software, exploring AI, and making small things useful will live. For now, the projects tell the story.</p><a class="text-link" href="/work/">Explore the projects <span aria-hidden="true">↗</span></a></div>{% endfor %}</div></section>
-<section class="about-teaser section"><span class="eyebrow section-number">03 / THE PERSON BEHIND THE PROJECTS</span><div class="about-teaser-grid"><h2>Serious about the craft.<br><em>Still curious about everything.</em></h2><div><p>A decade of building backend systems taught me to care about what happens behind the screen. Side projects keep me thinking about the person in front of it.</p><p>These days, I’m especially interested in AI that helps people do useful work, and small apps with a clear reason to exist.</p><a class="text-link" href="/about/">A little more about me <span aria-hidden="true">↗</span></a></div></div></section>
-<section class="contact-strip"><p>Something on your mind?</p><a href="mailto:{{ site.email }}">Let’s talk. <span aria-hidden="true">↗</span></a></section>
+
+<section class="about-teaser section">
+  <span class="eyebrow section-number">ABOUT ME</span>
+  <div class="about-teaser-grid">
+    <h2>Deep in the backend.<br><em>Always building for people.</em></h2>
+    <div>
+      <p>Over a decade of engineering backend and distributed architectures at PayPal, AppZen, and Persistent taught me how to make systems resilient, scalable, and quiet under load.</p>
+      <p>Outside of work, I build small apps and practical AI tools that solve real everyday problems—with simple design, clean code, and zero clutter.</p>
+      <a class="text-link" href="/about/">A little more about me <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-strip">
+  <p>Have an idea, a question, or just want to connect?</p>
+  <a href="mailto:{{ site.email }}">Say hello. <span aria-hidden="true">↗</span></a>
+</section>
