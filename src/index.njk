@@ -4,17 +4,18 @@ layout: layouts/base.njk
 <section class="hero">
   <div class="status-pill">
     <span class="status-dot"></span>
-    <span>Tech Lead, OpenBanking @ PayPal &middot; Bengaluru, India</span>
+    <span>Staff Software Engineer &amp; Tech Lead @ PayPal &middot; Bengaluru, India</span>
   </div>
   <h1 class="hero-title">Lakshmikant Deshpande</h1>
-  <p class="hero-role">Staff Software Engineer &amp; Systems Builder</p>
+  <p class="hero-role">Distributed Systems &middot; Payments Architecture &middot; Technical Leadership</p>
   <div class="hero-bio">
-    <p>I lead engineering for OpenBanking and payment platforms at <strong>PayPal</strong>, designing high-availability distributed systems that move money across global payment rails (SEPA, UK Open Banking, Paidy, and Boku).</p>
-    <p>In my personal time, I build focused utilities, native Android apps, and practical AI tools that simplify code analysis and everyday tasks.</p>
+    <p>I lead engineering for OpenBanking and alternative payment platforms at <strong>PayPal</strong>, designing resilient, high-availability backend systems that move money across global payment rails (including SEPA, UK Open Banking, Paidy, and Boku).</p>
+    <p>Outside of large-scale infrastructure, I run <a href="https://programmercat.com" target="_blank" rel="noopener"><strong>Programmer Cat</strong></a>, an independent software studio where I build focused mobile apps, privacy utilities, and practical AI tools.</p>
   </div>
   <div class="hero-links">
-    <a class="hero-btn" href="#projects">Projects &darr;</a>
-    <a class="hero-btn" href="#experience">Experience &darr;</a>
+    <a class="hero-btn" href="#experience">Career Journey &darr;</a>
+    <a class="hero-btn" href="#systems">Systems &amp; Architecture &darr;</a>
+    <a class="hero-btn" href="#programmer-cat">Indie Studio (Programmer Cat) &darr;</a>
     <a class="hero-btn" href="/about/">About me &rarr;</a>
     <a class="hero-icon-link" href="{{ site.github }}" target="_blank" rel="noopener" aria-label="GitHub">
       {% include "icons/github.svg" %} <span>GitHub</span>
@@ -28,35 +29,18 @@ layout: layouts/base.njk
   </div>
 </section>
 
-<section id="projects" class="section work-section">
-  <div class="section-heading">
-    <div>
-      <span class="section-kicker">INDEPENDENT SOFTWARE</span>
-      <h2>Featured Projects</h2>
-    </div>
-    <a class="text-link" href="/work/">View all projects <span aria-hidden="true">&rarr;</span></a>
-  </div>
-  <div class="project-grid">
-    {% for project in collections.projects %}
-      {% if project.data.featured %}
-        {% include 'project-card.njk' %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
-
 <section id="experience" class="section experience-section">
   <div class="section-heading">
     <div>
-      <span class="section-kicker">CAREER &amp; TRACK RECORD</span>
-      <h2>Engineering Experience</h2>
+      <span class="section-kicker">CAREER TRACK RECORD</span>
+      <h2>Professional Journey</h2>
     </div>
-    <a class="text-link" href="/about/">Full background <span aria-hidden="true">&rarr;</span></a>
+    <a class="text-link" href="/about/">Full bio &amp; background <span aria-hidden="true">&rarr;</span></a>
   </div>
   <div class="experience-list">
     <article class="experience-card">
       <div class="experience-icon-col">
-        <div class="company-logo-badge paypal-badge">
+        <div class="company-logo-badge paypal-badge" title="PayPal">
           {% include "icons/paypal.svg" %}
         </div>
       </div>
@@ -68,13 +52,14 @@ layout: layouts/base.njk
           </div>
           <span class="experience-date-pill current">2021 &mdash; Present</span>
         </div>
-        <p class="experience-desc">Leading architecture for UK Open Banking Payment Initiation and alternative payment rails. Engineered high-throughput settlement systems for Paidy, SEPA recurring payments, and Boku integrations handling global transaction volume.</p>
+        <p class="experience-desc">Leading architecture and technical execution for UK Open Banking Payment Initiation and alternative payment integrations. Engineered high-throughput, fault-tolerant settlement services for Paidy, SEPA recurring payments, and Boku settlement rails handling critical global transactional volume.</p>
         <div class="experience-tags">
           <span class="exp-tag">Java</span>
           <span class="exp-tag">Distributed Systems</span>
           <span class="exp-tag">Spring Boot</span>
           <span class="exp-tag">Apache Kafka</span>
           <span class="exp-tag">OpenBanking</span>
+          <span class="exp-tag">High Concurrency</span>
           <span class="exp-tag">Payment Rails</span>
         </div>
       </div>
@@ -82,7 +67,7 @@ layout: layouts/base.njk
 
     <article class="experience-card">
       <div class="experience-icon-col">
-        <div class="company-logo-badge appzen-badge">
+        <div class="company-logo-badge appzen-badge" title="AppZen">
           {% include "icons/appzen.svg" %}
         </div>
       </div>
@@ -94,7 +79,7 @@ layout: layouts/base.njk
           </div>
           <span class="experience-date-pill">2018 &mdash; 2021</span>
         </div>
-        <p class="experience-desc">Engineered backend microservices and asynchronous audit data pipelines for automated corporate spend compliance, invoice auditing, and fraud detection platforms.</p>
+        <p class="experience-desc">Engineered backend microservices, data ingestion pipelines, and asynchronous audit workflows for automated corporate spend compliance, invoice auditing, and financial risk detection at enterprise scale.</p>
         <div class="experience-tags">
           <span class="exp-tag">Python</span>
           <span class="exp-tag">Microservices</span>
@@ -107,7 +92,7 @@ layout: layouts/base.njk
 
     <article class="experience-card">
       <div class="experience-icon-col">
-        <div class="company-logo-badge clairvoyant-badge">
+        <div class="company-logo-badge clairvoyant-badge" title="Clairvoyant">
           {% include "icons/clairvoyant.svg" %}
         </div>
       </div>
@@ -119,11 +104,11 @@ layout: layouts/base.njk
           </div>
           <span class="experience-date-pill">2016 &mdash; 2018</span>
         </div>
-        <p class="experience-desc">Built enterprise big data pipelines and distributed ingestion frameworks. Implemented real-time stream processing and data lake synchronization across cloud infrastructure.</p>
+        <p class="experience-desc">Built enterprise big data pipelines and distributed ingestion frameworks. Implemented real-time stream processing, Spark jobs, and data lake synchronization across cloud and on-premise infrastructure.</p>
         <div class="experience-tags">
           <span class="exp-tag">Apache Spark</span>
           <span class="exp-tag">Hadoop</span>
-          <span class="exp-tag">Kafka</span>
+          <span class="exp-tag">Apache Kafka</span>
           <span class="exp-tag">Big Data</span>
           <span class="exp-tag">Data Ingestion</span>
         </div>
@@ -132,7 +117,7 @@ layout: layouts/base.njk
 
     <article class="experience-card">
       <div class="experience-icon-col">
-        <div class="company-logo-badge persistent-badge">
+        <div class="company-logo-badge persistent-badge" title="Persistent Systems">
           {% include "icons/persistent.svg" %}
         </div>
       </div>
@@ -140,11 +125,11 @@ layout: layouts/base.njk
         <div class="experience-header">
           <div>
             <h3 class="experience-role-title">Software Engineer</h3>
-            <span class="experience-company-name">Persistent Systems &middot; Enterprise Systems</span>
+            <span class="experience-company-name">Persistent Systems &middot; Enterprise Software</span>
           </div>
           <span class="experience-date-pill">2014 &mdash; 2016</span>
         </div>
-        <p class="experience-desc">Developed core enterprise backend components, data interfaces, and transactional REST APIs for mission-critical client applications.</p>
+        <p class="experience-desc">Developed core enterprise backend components, data integration services, and transactional REST APIs for mission-critical client deployments.</p>
         <div class="experience-tags">
           <span class="exp-tag">Java</span>
           <span class="exp-tag">Spring</span>
@@ -156,26 +141,52 @@ layout: layouts/base.njk
   </div>
 </section>
 
-<section class="section toolkit-section">
+<section id="systems" class="section toolkit-section">
   <div class="section-heading">
     <div>
-      <span class="section-kicker">TECHNICAL CAPABILITIES</span>
-      <h2>Systems &amp; Toolkit</h2>
+      <span class="section-kicker">ENGINEERING DEPTH</span>
+      <h2>Systems &amp; Architecture Focus</h2>
     </div>
   </div>
   <div class="toolkit-grid">
     <div class="toolkit-card">
-      <h3 class="toolkit-title">Distributed Systems &amp; Payments</h3>
-      <p class="toolkit-desc">High-throughput payment orchestration, OpenBanking APIs, transactional settlement pipelines, event-driven architectures, and high-availability financial infrastructure.</p>
+      <h3 class="toolkit-title">OpenBanking &amp; Payment Rails</h3>
+      <p class="toolkit-desc">Architecting payment initiation, cross-border settlements (SEPA, Paidy, Boku), transactional idempotency, and regulatory compliance across global banking APIs.</p>
     </div>
     <div class="toolkit-card">
-      <h3 class="toolkit-title">Backend Architecture</h3>
-      <p class="toolkit-desc">Java, Spring Boot, Python, Kotlin, Apache Kafka, relational &amp; NoSQL datastores, Docker, and resilient microservice design.</p>
+      <h3 class="toolkit-title">Distributed Backend Systems</h3>
+      <p class="toolkit-desc">Designing event-driven streaming pipelines with Apache Kafka, scalable microservices with Java/Spring Boot and Python, and robust failure recovery patterns.</p>
     </div>
     <div class="toolkit-card">
-      <h3 class="toolkit-title">App &amp; AI Prototyping</h3>
-      <p class="toolkit-desc">Native Android development (Jetpack Compose), LLM-assisted code documentation (AST parsing), CLI tools, and rapid experimental prototyping.</p>
+      <h3 class="toolkit-title">Architecture &amp; Reliability</h3>
+      <p class="toolkit-desc">API design, system performance profiling, automated integration test frameworks, and dependable high-throughput transaction processing.</p>
     </div>
+  </div>
+</section>
+
+<section id="programmer-cat" class="section indie-section">
+  <div class="section-heading">
+    <div>
+      <span class="section-kicker">INDEPENDENT STUDIO</span>
+      <h2>Programmer Cat</h2>
+    </div>
+    <a class="solid-brand-btn" href="https://programmercat.com" target="_blank" rel="noopener">Visit programmercat.com <span aria-hidden="true">&nearr;</span></a>
+  </div>
+  <div class="indie-banner-card">
+    <div class="indie-banner-text">
+      <p>Outside of large-scale payment infrastructure, I design and build consumer apps and developer utilities under my independent studio, <a href="https://programmercat.com" target="_blank" rel="noopener"><strong>Programmer Cat</strong></a>. From URL privacy and early education to AI code generation, these projects reflect my love for crafting useful, self-contained software.</p>
+    </div>
+    <div class="indie-banner-links">
+      <a class="indie-btn" href="https://programmercat.com" target="_blank" rel="noopener">Explore Programmer Cat &nearr;</a>
+      <a class="indie-btn secondary" href="/work/">View Architecture Case Studies &rarr;</a>
+    </div>
+  </div>
+  <div class="project-grid">
+    {% for project in collections.projects %}
+      {% if project.data.featured %}
+        {% include 'project-card.njk' %}
+      {% endif %}
+    {% endfor %}
   </div>
 </section>
 
@@ -183,7 +194,7 @@ layout: layouts/base.njk
   <div class="section-heading">
     <div>
       <span class="section-kicker">FIELD NOTES</span>
-      <h2>Writing &amp; Thoughts</h2>
+      <h2>Writing &amp; Technical Thoughts</h2>
     </div>
     <a class="text-link" href="/writing/">All writing <span aria-hidden="true">&rarr;</span></a>
   </div>
@@ -210,7 +221,7 @@ layout: layouts/base.njk
     </div>
   </div>
   <div class="contact-box">
-    <p>Always happy to discuss distributed systems, payment platforms, independent tools, or software engineering in general. Drop me an email or find me online:</p>
+    <p>Always happy to discuss distributed systems, payment platforms, independent apps, or engineering leadership. Drop me an email or find me online:</p>
     <div class="contact-methods">
       <a class="contact-pill" href="mailto:{{ site.email }}">
         {% include "icons/mail.svg" %} <span>{{ site.email }}</span>

@@ -13,7 +13,7 @@
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:image" content="{{ site.url }}/assets/social-card.png">
-  <meta property="og:image:alt" content="Lakshmikant Deshpande — Software Engineer">
+  <meta property="og:image:alt" content="Lakshmikant Deshpande — Staff Software Engineer">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/atom+xml" title="{{ site.name }} — Writing" href="/feed.xml">
@@ -29,9 +29,10 @@
         <span class="identity-name">Lakshmikant Deshpande</span>
       </a>
       <nav aria-label="Main navigation">
-        <a href="/work/" {% if section == 'work' %}aria-current="page"{% endif %}>Projects</a>
-        <a href="/writing/" {% if section == 'writing' %}aria-current="page"{% endif %}>Writing</a>
         <a href="/about/" {% if section == 'about' %}aria-current="page"{% endif %}>About</a>
+        <a href="/work/" {% if section == 'work' %}aria-current="page"{% endif %}>Projects</a>
+        <a class="nav-external-link" href="https://programmercat.com" target="_blank" rel="noopener">Programmer Cat <span aria-hidden="true">&nearr;</span></a>
+        <a href="/writing/" {% if section == 'writing' %}aria-current="page"{% endif %}>Writing</a>
         <a href="mailto:{{ site.email }}">Contact</a>
       </nav>
     </header>
@@ -39,14 +40,15 @@
     <footer class="site-footer">
       <div>
         <a class="footer-name" href="/">Lakshmikant Deshpande</a>
-        <p>Software Engineer · Bengaluru, India</p>
+        <p>Staff Software Engineer &middot; Bengaluru, India</p>
       </div>
       <nav aria-label="Social links">
-        <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
-        <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
-        <a href="/feed.xml">RSS <span aria-hidden="true">↗</span></a>
+        <a href="https://programmercat.com" target="_blank" rel="noopener">Programmer Cat <span aria-hidden="true">&nearr;</span></a>
+        <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub <span aria-hidden="true">&nearr;</span></a>
+        <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">&nearr;</span></a>
+        <a href="/feed.xml">RSS <span aria-hidden="true">&nearr;</span></a>
       </nav>
-      <span class="copyright">© {{ site.year }}</span>
+      <span class="copyright">&copy; {{ site.year }}</span>
     </footer>
   </div>
 </body>

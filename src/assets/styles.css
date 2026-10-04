@@ -135,6 +135,19 @@ button {
   text-underline-offset: 4px;
 }
 
+.site-header nav a.nav-external-link {
+  color: var(--ink);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.site-header nav a.nav-external-link span {
+  font-size: 11px;
+  color: var(--plum);
+}
+
 /* Hero Section */
 .hero {
   padding: 44px 0 36px;
@@ -482,6 +495,15 @@ button {
   display: grid;
   place-items: center;
   border: 1px solid var(--line-light);
+  flex-shrink: 0;
+}
+
+.company-logo-badge svg {
+  display: block;
+  max-width: 24px;
+  max-height: 24px;
+  width: auto;
+  height: auto;
 }
 
 .paypal-badge {
@@ -592,6 +614,87 @@ button {
   line-height: 1.6;
   color: var(--muted);
   margin: 0;
+}
+
+/* Independent Studio / Programmer Cat */
+.solid-brand-btn {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--ink);
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.solid-brand-btn:hover {
+  background: var(--plum);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.indie-banner-card {
+  background: linear-gradient(135deg, #faf7f2 0%, #f4ede4 100%);
+  border: 1px solid #e5ded4;
+  border-radius: 10px;
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.indie-banner-text p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #3b353e;
+  margin: 0;
+}
+
+.indie-banner-text a {
+  color: var(--plum);
+  text-decoration: underline;
+}
+
+.indie-banner-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.indie-btn {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--plum);
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.indie-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+.indie-btn.secondary {
+  color: var(--ink);
+  background: #ffffff;
+  border: 1px solid var(--line);
+}
+
+.indie-btn.secondary:hover {
+  background: #fbf9f6;
+  border-color: #baaaba;
 }
 
 /* Writing Section */
@@ -1158,6 +1261,11 @@ button {
     align-items: flex-start;
     gap: 12px;
     padding: 20px 0;
+  }
+
+  .section-heading {
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .project-grid {
