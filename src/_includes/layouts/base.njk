@@ -13,7 +13,7 @@
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:image" content="{{ site.url }}/assets/social-card.png">
-  <meta property="og:image:alt" content="Lakshmikant Deshpande. Useful software. A little more human.">
+  <meta property="og:image:alt" content="Lakshmikant Deshpande — Software Engineer">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/atom+xml" title="{{ site.name }} — Writing" href="/feed.xml">
@@ -25,18 +25,27 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="site-shell">
     <header class="site-header">
-      <a class="identity" href="/" aria-label="Lakshmikant Deshpande, home"><span class="monogram" aria-hidden="true">ld<span>.</span></span><span class="identity-name">Lakshmikant<br>Deshpande</span></a>
+      <a class="identity" href="/" aria-label="Lakshmikant Deshpande, home">
+        <span class="identity-name">Lakshmikant Deshpande</span>
+      </a>
       <nav aria-label="Main navigation">
-        <a href="/work/" {% if section == 'work' %}aria-current="page"{% endif %}>Work</a>
+        <a href="/work/" {% if section == 'work' %}aria-current="page"{% endif %}>Projects</a>
         <a href="/writing/" {% if section == 'writing' %}aria-current="page"{% endif %}>Writing</a>
         <a href="/about/" {% if section == 'about' %}aria-current="page"{% endif %}>About</a>
+        <a href="mailto:{{ site.email }}">Contact</a>
       </nav>
-      <a class="header-contact" href="mailto:{{ site.email }}">Say hello <span aria-hidden="true">↗</span></a>
     </header>
     <main id="main" tabindex="-1">{{ content | safe }}</main>
     <footer class="site-footer">
-      <div><a class="footer-name" href="/">Lakshmikant Deshpande</a><p>Built with care. Always a work in progress.</p></div>
-      <nav aria-label="Social links"><a href="{{ site.github }}">GitHub <span aria-hidden="true">↗</span></a><a href="{{ site.linkedin }}">LinkedIn <span aria-hidden="true">↗</span></a><a href="/feed.xml">RSS <span aria-hidden="true">↗</span></a></nav>
+      <div>
+        <a class="footer-name" href="/">Lakshmikant Deshpande</a>
+        <p>Software Engineer · Bengaluru, India</p>
+      </div>
+      <nav aria-label="Social links">
+        <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="/feed.xml">RSS <span aria-hidden="true">↗</span></a>
+      </nav>
       <span class="copyright">© {{ site.year }}</span>
     </footer>
   </div>

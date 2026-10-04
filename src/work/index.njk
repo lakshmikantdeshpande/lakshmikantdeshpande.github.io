@@ -1,10 +1,21 @@
 ---
 layout: layouts/base.njk
-title: Work
+title: Projects
 section: work
 projectHeading: h2
-description: Small apps and practical experiments by Lakshmikant Deshpande. Explore Minku Learns, Clean My Links, Unknown Messenger, and AutoLLD.
+description: Apps, tools, and open-source software built by Lakshmikant Deshpande.
 ---
-<header class="page-intro"><span class="eyebrow">THE PORTFOLIO</span><h1>Made with<br><em>curiosity.</em></h1><p>Some started with a small annoyance. Others with a “what if?”<br>All of them became something you can use.</p></header>
-<div class="project-grid work-page-grid">{% for project in collections.projects %}{% include 'project-card.njk' %}{% endfor %}</div>
-<section class="open-source-note"><span class="eyebrow">ALSO ON THE WORKBENCH</span><h2>The experiments behind the projects.</h2><p>Code, learning, and the occasional unfinished idea. There’s more over on GitHub.</p><a class="text-link" href="{{ site.github }}">Explore my GitHub <span aria-hidden="true">↗</span></a></section>
+<header class="page-intro">
+  <h1>Projects &amp; Tools</h1>
+  <p>A collection of mobile applications, developer utilities, and AI experiments I’ve built.</p>
+</header>
+<div class="project-grid work-page-grid">
+  {% for project in collections.projects %}
+    {% include 'project-card.njk' %}
+  {% endfor %}
+</div>
+<section class="open-source-note">
+  <h2>Open Source &amp; Code</h2>
+  <p>More side projects, scripts, and open-source repositories live over on GitHub.</p>
+  <a class="text-link" href="{{ site.github }}" target="_blank" rel="noopener">Explore GitHub profile <span aria-hidden="true">&rarr;</span></a>
+</section>

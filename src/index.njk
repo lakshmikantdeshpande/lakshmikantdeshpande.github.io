@@ -2,25 +2,26 @@
 layout: layouts/base.njk
 ---
 <section class="hero">
-  <div class="eyebrow"><span class="status-dot"></span> SOFTWARE ENGINEER & BUILDER</div>
-  <h1>Engineering systems.<br>Crafting thoughtful <span class="hero-last-word"><em>tools.</em><span class="hero-asterisk" aria-hidden="true">✳</span></span></h1>
-  <div class="hero-bottom">
-    <p>I’m Lakshmikant Deshpande. Based in Bengaluru, I design backend and distributed systems at PayPal, and build small apps, utilities, and AI experiments in my free time.</p>
-    <a class="text-link" href="#selected-work">Explore selected work <span aria-hidden="true">↓</span></a>
+  <h1 class="hero-title">Lakshmikant Deshpande</h1>
+  <p class="hero-role">Staff Software Engineer at PayPal &middot; Bengaluru, India</p>
+  <div class="hero-bio">
+    <p>I build backend platforms and distributed systems at <strong>PayPal</strong>, focusing on payments, resilience, and high-throughput services. Over the past decade, my work has spanned distributed architectures, APIs, and data pipelines.</p>
+    <p>Outside of large-scale systems, I enjoy building small, focused utilities—from Android apps like <em>Clean My Links</em> to developer tools and AI experiments like <em>AutoLLD</em>.</p>
   </div>
-  <div class="hero-footnote">
-    <span>Staff Software Engineer @ PayPal</span>
-    <span>Bengaluru, India · Building & tinkering</span>
+  <div class="hero-links">
+    <a href="#projects">Projects &darr;</a>
+    <a href="#experience">Experience &darr;</a>
+    <a href="/about/">More about me &rarr;</a>
+    <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub &nearr;</a>
+    <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn &nearr;</a>
+    <a href="mailto:{{ site.email }}">Email &nearr;</a>
   </div>
 </section>
 
-<section id="selected-work" class="section work-section">
+<section id="projects" class="section work-section">
   <div class="section-heading">
-    <div>
-      <span class="eyebrow section-number">SELECTED PROJECTS</span>
-      <h2>Things I’ve built & shipped.</h2>
-    </div>
-    <a class="text-link" href="/work/">All projects <span aria-hidden="true">↗</span></a>
+    <h2>Featured Projects</h2>
+    <a class="text-link" href="/work/">View all projects <span aria-hidden="true">&rarr;</span></a>
   </div>
   <div class="project-grid">
     {% for project in collections.projects %}
@@ -31,13 +32,47 @@ layout: layouts/base.njk
   </div>
 </section>
 
+<section id="experience" class="section experience-section">
+  <div class="section-heading">
+    <h2>Experience</h2>
+    <a class="text-link" href="/about/">Detailed background <span aria-hidden="true">&rarr;</span></a>
+  </div>
+  <div class="experience-list">
+    <div class="experience-item">
+      <div class="experience-meta">
+        <span class="experience-company">PayPal</span>
+        <span class="experience-period">Staff Software Engineer</span>
+      </div>
+      <p class="experience-desc">Designing and engineering payment systems, distributed backend infrastructure, and scalable transactional services.</p>
+    </div>
+    <div class="experience-item">
+      <div class="experience-meta">
+        <span class="experience-company">AppZen</span>
+        <span class="experience-period">Software Engineer</span>
+      </div>
+      <p class="experience-desc">Built backend services and data workflows for AI-driven financial audit and automated compliance platforms.</p>
+    </div>
+    <div class="experience-item">
+      <div class="experience-meta">
+        <span class="experience-company">Clairvoyant</span>
+        <span class="experience-period">Software Engineer</span>
+      </div>
+      <p class="experience-desc">Engineered distributed data pipelines, cloud data platforms, and large-scale data ingestion systems.</p>
+    </div>
+    <div class="experience-item">
+      <div class="experience-meta">
+        <span class="experience-company">Persistent Systems</span>
+        <span class="experience-period">Software Engineer</span>
+      </div>
+      <p class="experience-desc">Developed enterprise software, backend services, and APIs across core client systems.</p>
+    </div>
+  </div>
+</section>
+
 <section class="section writing-section">
   <div class="section-heading">
-    <div>
-      <span class="eyebrow section-number">FIELD NOTES</span>
-      <h2>Thinking out loud.</h2>
-    </div>
-    <a class="text-link" href="/writing/">All writing <span aria-hidden="true">↗</span></a>
+    <h2>Writing &amp; Notes</h2>
+    <a class="text-link" href="/writing/">All writing <span aria-hidden="true">&rarr;</span></a>
   </div>
   <div class="post-list">
     {% for post in collections.posts %}
@@ -46,27 +81,24 @@ layout: layouts/base.njk
       {% endif %}
     {% else %}
       <div class="writing-empty">
-        <p class="empty-heading">A notebook, just opened.</p>
-        <p>This is where notes on building software, exploring AI, and making small things useful will live. For now, the projects tell the story.</p>
-        <a class="text-link" href="/work/">Explore the projects <span aria-hidden="true">↗</span></a>
+        <p class="empty-heading">Notebook just opened.</p>
+        <p>Notes on distributed systems, AI experimentation, and software craft will be published here. Follow along via RSS or check back soon.</p>
+        <a class="text-link" href="/feed.xml">Subscribe via RSS <span aria-hidden="true">&nearr;</span></a>
       </div>
     {% endfor %}
   </div>
 </section>
 
-<section class="about-teaser section">
-  <span class="eyebrow section-number">ABOUT ME</span>
-  <div class="about-teaser-grid">
-    <h2>Deep in the backend.<br><em>Always building for people.</em></h2>
-    <div>
-      <p>Over a decade of engineering backend and distributed architectures at PayPal, AppZen, and Persistent taught me how to make systems resilient, scalable, and quiet under load.</p>
-      <p>Outside of work, I build small apps and practical AI tools that solve real everyday problems—with simple design, clean code, and zero clutter.</p>
-      <a class="text-link" href="/about/">A little more about me <span aria-hidden="true">↗</span></a>
+<section class="section contact-section">
+  <div class="section-heading">
+    <h2>Get in Touch</h2>
+  </div>
+  <div class="contact-box">
+    <p>Whether you'd like to talk about backend architectures, small utilities, AI tooling, or just say hello—feel free to drop me a note.</p>
+    <div class="contact-methods">
+      <a class="contact-link" href="mailto:{{ site.email }}">{{ site.email }} &nearr;</a>
+      <a class="contact-link" href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn &nearr;</a>
+      <a class="contact-link" href="{{ site.github }}" target="_blank" rel="noopener">GitHub &nearr;</a>
     </div>
   </div>
-</section>
-
-<section class="contact-strip">
-  <p>Have an idea, a question, or just want to connect?</p>
-  <a href="mailto:{{ site.email }}">Say hello. <span aria-hidden="true">↗</span></a>
 </section>
