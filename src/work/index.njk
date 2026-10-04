@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+title: Work
+section: work
+projectHeading: h2
+description: Small apps and practical experiments by Lakshmikant Deshpande. Explore Minku Learns, Clean My Links, Unknown Messenger, and AutoLLD.
+---
+<header class="page-intro"><span class="eyebrow">THE PORTFOLIO</span><h1>Made with<br><em>curiosity.</em></h1><p>Some started with a small annoyance. Others with a “what if?”<br>All of them became something you can use.</p></header>
+<div class="project-grid work-page-grid">{% for project in collections.projects %}{% include 'project-card.njk' %}{% endfor %}</div>
+<section class="open-source-note"><span class="eyebrow">ALSO ON THE WORKBENCH</span><h2>The experiments behind the projects.</h2><p>Code, learning, and the occasional unfinished idea. There’s more over on GitHub.</p><a class="text-link" href="{{ site.github }}">Explore my GitHub <span aria-hidden="true">↗</span></a></section>

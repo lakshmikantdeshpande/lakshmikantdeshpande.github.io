@@ -1,0 +1,7 @@
+---
+layout: layouts/base.njk
+section: work
+---
+<div class="detail-heading"><a class="back-link" href="/work/">← All projects</a><span class="eyebrow">{{ category }} / {{ tagline }}</span><h1>{{ title }}</h1><p>{{ description }}</p><div class="project-detail-links"><a class="solid-link" href="{{ externalUrl }}">{{ externalLabel }} <span aria-hidden="true">↗</span></a></div></div>
+<div class="detail-body"><aside class="project-sidebar"><span class="eyebrow">AT A GLANCE</span><dl><dt>Focus</dt><dd>{{ focus }}</dd><dt>Platform</dt><dd>{{ platform }}</dd><dt>My role</dt><dd>Design & development</dd></dl></aside><article class="prose">{{ content | safe }}</article></div>
+<div class="next-project"><span class="eyebrow">KEEP EXPLORING</span><a href="/work/">Back to the work <span aria-hidden="true">↗</span></a></div>

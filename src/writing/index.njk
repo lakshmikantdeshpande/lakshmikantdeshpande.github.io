@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+title: Writing
+section: writing
+postHeading: h2
+description: Notes on software, practical AI, and the small things worth building. Writing by Lakshmikant Deshpande.
+---
+<header class="page-intro"><span class="eyebrow">THE NOTEBOOK</span><h1>Things I’m<br><em>thinking about.</em></h1><p>Notes from building software, following a question,<br>and occasionally learning something the long way.</p></header>
+<div class="post-list writing-page-list">{% for post in collections.posts %}{% include 'post-row.njk' %}{% else %}<div class="writing-empty writing-empty-large"><span class="notebook-mark" aria-hidden="true">✎</span><h2>A notebook, just opened.</h2><p>The first notes are still taking shape. Expect thoughts on building useful software, practical AI, and what small projects teach you.</p><a class="text-link" href="/work/">In the meantime, explore my work <span aria-hidden="true">↗</span></a></div>{% endfor %}</div>
+<div class="subscribe-note"><span class="status-dot"></span><p>Prefer a quieter way to follow along? <a href="/feed.xml">Subscribe with RSS ↗</a></p></div>

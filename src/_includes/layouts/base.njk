@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="{% if article %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/assets/social-card.png">
+  <meta property="og:image:alt" content="Lakshmikant Deshpande. Useful software. A little more human.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.name }} — Writing" href="/feed.xml">
+  <link rel="preload" href="/assets/fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="module" src="/assets/js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="identity" href="/" aria-label="Lakshmikant Deshpande, home"><span class="monogram" aria-hidden="true">ld<span>.</span></span><span class="identity-name">Lakshmikant<br>Deshpande</span></a>
+      <nav aria-label="Main navigation">
+        <a href="/work/" {% if section == 'work' %}aria-current="page"{% endif %}>Work</a>
+        <a href="/writing/" {% if section == 'writing' %}aria-current="page"{% endif %}>Writing</a>
+        <a href="/about/" {% if section == 'about' %}aria-current="page"{% endif %}>About</a>
+      </nav>
+      <a class="header-contact" href="mailto:{{ site.email }}">Say hello <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main" tabindex="-1">{{ content | safe }}</main>
+    <footer class="site-footer">
+      <div><a class="footer-name" href="/">Lakshmikant Deshpande</a><p>Built with care. Always a work in progress.</p></div>
+      <nav aria-label="Social links"><a href="{{ site.github }}">GitHub <span aria-hidden="true">↗</span></a><a href="{{ site.linkedin }}">LinkedIn <span aria-hidden="true">↗</span></a><a href="/feed.xml">RSS <span aria-hidden="true">↗</span></a></nav>
+      <span class="copyright">© {{ site.year }}</span>
+    </footer>
+  </div>
+</body>
+</html>

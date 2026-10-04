@@ -1,0 +1,17 @@
+<article class="project-card project-{{ project.data.visual }}">
+  <a class="project-visual" href="{{ project.url }}" aria-label="Explore {{ project.data.title }}">
+    {% if project.data.visual == 'minku' %}
+    <div class="learning-art" aria-hidden="true"><span class="art-caption">A LITTLE CURIOSITY GOES A LONG WAY</span><div class="letter-blocks"><span>A</span><span>b</span><span>3</span></div><span class="art-spark spark-one">✳</span><span class="art-spark spark-two">✧</span><span class="mini-label">Little minds. Big discoveries.</span></div>
+    {% elif project.data.visual == 'clean' %}
+    <div class="clean-art" aria-hidden="true"><span class="art-caption">LESS TRACKING. MORE SHARING.</span><div class="url-slip original"><span class="slip-dot"></span> example.com/hello<span class="tracking">?utm_source=…</span></div><span class="clean-connector">↓</span><div class="url-slip cleaned"><span class="slip-check">✓</span> example.com/hello <span class="tiny-spark">✧</span></div><span class="mini-label">Just the link. Nothing extra.</span></div>
+    {% elif project.data.visual == 'messenger' %}
+    <div class="messenger-art" aria-hidden="true"><span class="art-caption">A CONVERSATION, MINUS A STEP</span><div class="message-bubble">Hello there.<span class="bubble-check">✓✓</span></div><div class="contact-slip"><span class="contact-circle">＋</span><span>No new contact needed.</span></div><span class="mini-label">Some conversations only need a hello.</span></div>
+    {% else %}
+    <div class="autolld-art" aria-hidden="true"><span class="art-caption">FROM CODE TO CLARITY</span><div class="code-map"><span class="code-symbol">{ }</span><span class="map-line"></span><div class="map-nodes"><i></i><i></i><i></i></div></div><span class="mini-label">The bigger picture, from the source.</span></div>
+    {% endif %}
+    <span class="visual-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="project-meta"><span>{{ project.data.category }}</span><span>{{ project.data.tagline }}</span></div>
+  <{{ projectHeading or "h3" }} class="project-title"><a href="{{ project.url }}">{{ project.data.title }}</a></{{ projectHeading or "h3" }}>
+  <p>{{ project.data.description }}</p>
+</article>
