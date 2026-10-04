@@ -220,6 +220,10 @@ svg {
 .hero h1 em {
   color: var(--plum);
 }
+.hero-last-word {
+  display: inline-block;
+  white-space: nowrap;
+}
 .hero-asterisk {
   font-family: Georgia, serif;
   display: inline-block;
