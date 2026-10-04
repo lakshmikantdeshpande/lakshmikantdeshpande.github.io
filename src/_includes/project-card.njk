@@ -1,17 +1,33 @@
-<article class="project-card">
+<article class="project-card project-card-{{ project.data.visual }}">
   <div class="project-card-header">
-    <{{ projectHeading or "h3" }} class="project-title">
-      <a href="{{ project.url }}">{{ project.data.title }}</a>
-    </{{ projectHeading or "h3" }}>
+    <div class="project-icon-box project-icon-{{ project.data.visual }}" aria-hidden="true">
+      {% if project.data.visual == 'clean' %}
+        {% include "icons/project-clean.svg" %}
+      {% elif project.data.visual == 'autolld' %}
+        {% include "icons/project-autolld.svg" %}
+      {% elif project.data.visual == 'minku' %}
+        {% include "icons/project-minku.svg" %}
+      {% else %}
+        {% include "icons/project-messenger.svg" %}
+      {% endif %}
+    </div>
+    <div class="project-heading-group">
+      <{{ projectHeading or "h3" }} class="project-title">
+        <a href="{{ project.url }}">{{ project.data.title }}</a>
+      </{{ projectHeading or "h3" }}>
+      <span class="project-tagline">{{ project.data.tagline }}</span>
+    </div>
     <span class="project-badge">{{ project.data.platform }}</span>
   </div>
   <p class="project-desc">{{ project.data.description }}</p>
   <div class="project-card-footer">
-    <span class="project-focus">{{ project.data.focus }}</span>
+    <div class="project-tech">
+      <span class="tech-pill">{{ project.data.focus }}</span>
+    </div>
     <div class="project-card-links">
-      <a class="project-link" href="{{ project.url }}">Case study →</a>
+      <a class="project-link" href="{{ project.url }}">Case study &rarr;</a>
       {% if project.data.externalUrl %}
-        <a class="project-ext-link" href="{{ project.data.externalUrl }}" target="_blank" rel="noopener">{{ project.data.externalLabel }} ↗</a>
+        <a class="project-ext-link" href="{{ project.data.externalUrl }}" target="_blank" rel="noopener">{{ project.data.externalLabel }} &nearr;</a>
       {% endif %}
     </div>
   </div>
