@@ -3,35 +3,26 @@ layout: layouts/base.njk
 title: About
 section: about
 permalink: /about/
-description: I’m Lakshmikant, a Bengaluru-based software engineer at PayPal. I build backend systems, small apps, and practical experiments with AI.
+description: About Lakshmikant Deshpande, a software engineer who works on payments systems and builds small tools.
 ---
-<header class="page-intro about-intro">
-  <h1>About Lakshmikant</h1>
-  <p class="about-subtitle">Senior Software Engineer &amp; Tech Lead at PayPal &middot; Bengaluru, India</p>
+<header class="page-intro">
+  <h1>About</h1>
+  <p>I&rsquo;m a software engineer. I currently live in Bangalore.</p>
 </header>
-<div class="about-body">
-  <aside class="about-card">
-    <div class="about-avatar" aria-hidden="true">LD</div>
-    <div class="about-location"><span class="status-dot"></span> Bengaluru, India</div>
-    <p>Systems Architect &middot; Tech Lead &middot; Builder</p>
-    <a class="text-link" href="{{ site.linkedin }}" target="_blank" rel="noopener">Find me on LinkedIn <span aria-hidden="true">&nearr;</span></a>
-    <a class="text-link" href="https://programmercat.com" target="_blank" rel="noopener" style="margin-top: 8px;">Apps on Programmer Cat <span aria-hidden="true">&nearr;</span></a>
-  </aside>
-  <div class="prose">
-    <p class="lead-paragraph">I like turning complex requirements into dependable, resilient software. In my day-to-day work, that means architecting distributed payment systems handling mission-critical transactional volume across global rails. In my spare time, it means crafting focused mobile utilities and experimental developer tools.</p>
-    <p>I’m a Senior Software Engineer and Tech Lead at <strong>PayPal</strong> in Bengaluru, leading a 5-developer engineering team for OpenBanking payment initiation and alternative payment integrations. My work focuses on high-availability transactional services, settlement pipelines (spanning SEPA, UK Open Banking, Paidy, and Boku), and distributed systems using Java 17, Spring Boot, and Apache Kafka.</p>
-    <p>Prior to PayPal, I built backend microservices, data ingestion engines, and distributed platforms at <strong>AppZen</strong> (Senior Backend Engineer, 2020&ndash;2021), <strong>Clairvoyant</strong> (Software Engineer 2, 2017&ndash;2020), and <strong>Persistent Systems</strong> (Software Engineer, starting September 2015). That foundation across enterprise big data pipelines, AI-driven corporate spend audit, and high-throughput backend services shaped how I approach engineering: understand failure modes deeply, insist on transactional idempotency, and design for long-term operational clarity.</p>
-    <p>I hold a Bachelor of Engineering (B.E.) in Information Technology from <strong>MIT College of Engineering, Pune</strong> (2012&ndash;2015).</p>
-    <h2>Personal Projects: Programmer Cat</h2>
-    <p>Outside of large-scale financial platforms, I design and publish consumer apps and developer utilities as personal projects under the label <a href="https://programmercat.com" target="_blank" rel="noopener"><strong>Programmer Cat</strong> <span aria-hidden="true">&nearr;</span></a>. From privacy utilities to early childhood education, these projects reflect my love for building end-to-end software that solves specific everyday problems:</p>
-    <ul>
-      <li><a href="/work/clean-my-links/"><strong>Clean My Links</strong></a> &mdash; An Android utility that strips tracking and marketing telemetry from shared URLs before sending them.</li>
-      <li><a href="/work/minku-learns/"><strong>Minku Learns</strong></a> &mdash; A distraction-free, offline learning companion for early learners (letters, numbers, and phonics).</li>
-      <li><a href="/work/unknown-messenger/"><strong>Unknown Messenger</strong></a> &mdash; A frictionless Android tool to start direct WhatsApp chats without cluttering personal address books.</li>
-      <li><a href="/work/autolld/"><strong>AutoLLD</strong></a> &mdash; A CLI tool utilizing AST parsing and LLMs to generate structured Low-Level Design documents directly from codebases.</li>
-    </ul>
-    <p>You can discover more apps and release updates directly at <a href="https://programmercat.com" target="_blank" rel="noopener"><strong>programmercat.com</strong></a> or inspect my technical notes and architecture breakdowns in the <a href="/work/">Projects section</a>.</p>
-    <h2>Get in touch</h2>
-    <p>Always open to conversations about distributed systems, payment platforms, software architecture, or independent software craft. Drop me a note via <a href="mailto:{{ site.email }}">email</a> or reach out on <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>.</p>
-  </div>
+<div class="prose about-prose">
+  <p>I like reliable backend systems, clear code, and software that does its job well. Most of my work has been on the server side, across payments, data, and mobile.</p>
+  <p>Outside of work I explore practical AI and tools that help me understand and document code. I also make small apps and tools out of interest, often when something annoys me. I share them on <a href="https://programmercat.com" target="_blank" rel="noopener">Programmer Cat <span aria-hidden="true">&nearr;</span></a>, my other personal website.</p>
+  <p>For the work I have done at each company, the <a href="/#experience">experience section</a> on the home page links to short write-ups.</p>
 </div>
+<section class="about-section">
+  <h2>Education</h2>
+  <div class="education-entry">
+    <p class="education-degree">Bachelor of Engineering in Information Technology</p>
+    <p class="education-school">MIT College of Engineering, Pune</p>
+    <p class="education-date">2012 to 2015</p>
+  </div>
+</section>
+<section class="about-section">
+  <h2>Get in touch</h2>
+  <p>The easiest way to reach me is by <a href="mailto:{{ site.email }}">email</a>, or you can find me on <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a> and <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>.</p>
+</section>

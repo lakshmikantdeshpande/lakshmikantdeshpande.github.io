@@ -4,7 +4,7 @@ export default {
     process.env.SITE_URL || "https://lakshmikantdeshpande.github.io"
   ).replace(/\/$/, ""),
   description:
-    "Software engineer, curious builder. Small apps, dependable systems, and experiments with AI. A personal portfolio by Lakshmikant Deshpande.",
+    "Lakshmikant Deshpande is a software engineer at PayPal. Personal notes on dependable payment systems, the occasional post, and small apps he builds out of interest.",
   email: "lakshmikantdeshpande@gmail.com",
   github: "https://github.com/lakshmikantdeshpande",
   linkedin: "https://www.linkedin.com/in/lakshmikantdeshpande/",

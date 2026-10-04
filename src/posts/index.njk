@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: Posts
+section: posts
+postHeading: h2
+description: Occasional posts by Lakshmikant Deshpande on software, practical AI, and small things worth building.
+---
+<header class="page-intro">
+  <h1>Posts</h1>
+  <p>Occasional posts on software, practical AI, and the small things I build. Newest first.</p>
+</header>
+<div class="post-list">
+  {% for post in collections.posts %}
+    {% include 'post-row.njk' %}
+  {% else %}
+    <div class="posts-empty">
+      <h2>Nothing published yet</h2>
+      <p>I haven&rsquo;t written any posts yet. When I do, they will appear here.</p>
+    </div>
+  {% endfor %}
+</div>

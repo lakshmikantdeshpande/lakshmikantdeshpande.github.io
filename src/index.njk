@@ -1,206 +1,122 @@
 ---
 layout: layouts/base.njk
 ---
-<section class="hero">
-  <div class="status-pill">
-    <span class="status-dot"></span>
-    <span>Senior Software Engineer &amp; Tech Lead @ PayPal &middot; Bengaluru, India</span>
-  </div>
-  <h1 class="hero-title">Lakshmikant Deshpande</h1>
-  <p class="hero-role">Distributed Systems &middot; Payments Architecture &middot; Technical Leadership</p>
-  <div class="hero-bio">
-    <p>I lead engineering for OpenBanking and alternative payment platforms at <strong>PayPal</strong>, designing resilient, high-availability backend systems that move money across global payment rails (including SEPA, UK Open Banking, Paidy, and Boku).</p>
-    <p>In my personal time, I build and publish mobile apps and developer utilities under the name <a href="https://programmercat.com" target="_blank" rel="noopener"><strong>Programmer Cat</strong></a>.</p>
-  </div>
-  <div class="hero-links">
-    <a class="hero-btn" href="#experience">Career Journey &darr;</a>
-    <a class="hero-btn" href="#systems">Systems &amp; Architecture &darr;</a>
-    <a class="hero-btn" href="#programmer-cat">Personal Projects (Programmer Cat) &darr;</a>
-    <a class="hero-btn" href="/about/">About me &rarr;</a>
-    <a class="hero-icon-link" href="{{ site.github }}" target="_blank" rel="noopener" aria-label="GitHub">
-      {% include "icons/github.svg" %} <span>GitHub</span>
-    </a>
-    <a class="hero-icon-link" href="{{ site.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
-      {% include "icons/linkedin.svg" %} <span>LinkedIn</span>
-    </a>
-    <a class="hero-icon-link" href="mailto:{{ site.email }}" aria-label="Email">
-      {% include "icons/mail.svg" %} <span>Email</span>
-    </a>
-  </div>
+<section class="intro">
+  <h1 class="intro-name">Lakshmikant Deshpande</h1>
+  <p class="intro-role">Senior Software Engineer at PayPal</p>
+  <p class="intro-bio">I&rsquo;m a software engineer at PayPal, where I lead a small team building payment systems that move money across open banking rails. I care about dependable, well-tested backend code. I also make small apps and experiment with practical AI. I share what I make on Programmer Cat, my other personal website.</p>
+  <ul class="intro-links">
+    <li>
+      <a href="{{ site.github }}" target="_blank" rel="noopener">
+        {% include "icons/github.svg" %} <span>GitHub</span>
+      </a>
+    </li>
+    <li>
+      <a href="{{ site.linkedin }}" target="_blank" rel="noopener">
+        {% include "icons/linkedin.svg" %} <span>LinkedIn</span>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:{{ site.email }}">
+        {% include "icons/mail.svg" %} <span>Email</span>
+      </a>
+    </li>
+  </ul>
+  <p class="intro-more"><a class="text-link" href="/about/">More about me <span aria-hidden="true">&rarr;</span></a></p>
 </section>
 
-<section id="experience" class="section experience-section">
-  <div class="section-heading">
-    <div>
-      <span class="section-kicker">CAREER TRACK RECORD</span>
-      <h2>Professional Journey</h2>
-    </div>
-    <a class="text-link" href="/about/">Full bio &amp; background <span aria-hidden="true">&rarr;</span></a>
+<section class="section" id="experience">
+  <div class="section-head">
+    <h2>Experience</h2>
   </div>
-  <div class="experience-list">
-    <article class="experience-card">
-      <div class="experience-icon-col">
-        <div class="company-logo-badge paypal-badge" title="PayPal">
-          {% include "icons/paypal.svg" %}
-        </div>
+  <ol class="timeline">
+    <li class="timeline-item">
+      <div class="timeline-logo" title="PayPal">
+        {% include "icons/paypal.svg" %}
       </div>
-      <div class="experience-content">
-        <div class="experience-header">
-          <div>
-            <h3 class="experience-role-title">Senior Software Engineer &amp; Tech Lead</h3>
-            <span class="experience-company-name">PayPal &middot; OpenBanking &amp; Alternative Payments</span>
+      <div class="timeline-content">
+        <div class="timeline-head">
+          <div class="timeline-title">
+            <h3 class="timeline-role">Senior Software Engineer</h3>
+            <span class="timeline-company">PayPal</span>
+            <span class="timeline-note">Software Engineer 3 from Aug 2021 to Apr 2025</span>
           </div>
-          <span class="experience-date-pill current">Aug 2021 &mdash; Present</span>
+          <span class="timeline-dates">Apr 2025 &ndash; Present</span>
         </div>
-        <p class="experience-desc">Leading a 5-developer team architecting a multi-tenant UK payment initiation system from scratch on FPS rails (HLD/LLD, API integrations, secure money movement, settlement, and reconciliation). Architected the APM Eligibility API handling 3.6M daily calls, optimized payment aggregator settlement pipelines cutting runtime by 50%, and delivered recurring SEPA integrations.</p>
-        <div class="experience-tags">
-          <span class="exp-tag">Java 17</span>
-          <span class="exp-tag">Distributed Systems</span>
-          <span class="exp-tag">Spring Boot</span>
-          <span class="exp-tag">OpenBanking / FPS</span>
-          <span class="exp-tag">AMQ</span>
-          <span class="exp-tag">Juno Cache</span>
-          <span class="exp-tag">WireMock</span>
-          <span class="exp-tag">Payment Rails</span>
-        </div>
+        <p class="timeline-desc">Leading a five-developer team building a multi-tenant UK payment initiation system on Faster Payments rails, from design through integrations, settlement, and reconciliation. Other work there includes an aggregator switching service, a payment eligibility API, and settlement pipelines.</p>
+        <a class="text-link timeline-link" href="/experience/paypal/">What I worked on at PayPal <span aria-hidden="true">&rarr;</span></a>
       </div>
-    </article>
-
-    <article class="experience-card">
-      <div class="experience-icon-col">
-        <div class="company-logo-badge appzen-badge" title="AppZen">
-          {% include "icons/appzen.svg" %}
-        </div>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-logo" title="AppZen">
+        {% include "icons/appzen.svg" %}
       </div>
-      <div class="experience-content">
-        <div class="experience-header">
-          <div>
-            <h3 class="experience-role-title">Senior Backend Engineer</h3>
-            <span class="experience-company-name">AppZen &middot; Financial AI &amp; Audit Platform</span>
+      <div class="timeline-content">
+        <div class="timeline-head">
+          <div class="timeline-title">
+            <h3 class="timeline-role">Senior Backend Engineer</h3>
+            <span class="timeline-company">AppZen</span>
           </div>
-          <span class="experience-date-pill">Feb 2020 &mdash; Aug 2021</span>
+          <span class="timeline-dates">Feb 2020 &ndash; Aug 2021</span>
         </div>
-        <p class="experience-desc">Re-architected customer export services and database schemas into a zero-code onboarding platform, cutting customer onboarding time by 90%. Moved AI callback processing into a multithreaded microservice, boosting report ingestion performance by 50%. Built a standalone document-to-PDF microservice from scratch, eliminating third-party conversion costs.</p>
-        <div class="experience-tags">
-          <span class="exp-tag">Python</span>
-          <span class="exp-tag">Go</span>
-          <span class="exp-tag">Microservices</span>
-          <span class="exp-tag">PostgreSQL</span>
-          <span class="exp-tag">Multithreading</span>
-          <span class="exp-tag">Computer Vision / CVAT</span>
-        </div>
+        <p class="timeline-desc">Re-architected a customer-specific export service into a configurable platform that onboarded new customers without code changes.</p>
+        <a class="text-link timeline-link" href="/experience/appzen/">What I worked on at AppZen <span aria-hidden="true">&rarr;</span></a>
       </div>
-    </article>
-
-    <article class="experience-card">
-      <div class="experience-icon-col">
-        <div class="company-logo-badge clairvoyant-badge" title="Clairvoyant">
-          {% include "icons/clairvoyant.svg" %}
-        </div>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-logo" title="Clairvoyant">
+        {% include "icons/clairvoyant.svg" %}
       </div>
-      <div class="experience-content">
-        <div class="experience-header">
-          <div>
-            <h3 class="experience-role-title">Software Engineer 2</h3>
-            <span class="experience-company-name">Clairvoyant &middot; Enterprise Systems &amp; Data Engineering</span>
+      <div class="timeline-content">
+        <div class="timeline-head">
+          <div class="timeline-title">
+            <h3 class="timeline-role">Software Engineer 2</h3>
+            <span class="timeline-company">Clairvoyant</span>
           </div>
-          <span class="experience-date-pill">Mar 2017 &mdash; Feb 2020</span>
+          <span class="timeline-dates">Mar 2017 &ndash; Feb 2020</span>
         </div>
-        <p class="experience-desc">Built reusable multi-channel notification microservices (email, SMS, web) from scratch. Reduced complex query execution time from 20s to 4s in Fulfillment Hub by optimizing Hibernate and native queries. Developed high-throughput web scraping crawlers collecting data across hundreds of sites.</p>
-        <div class="experience-tags">
-          <span class="exp-tag">Java</span>
-          <span class="exp-tag">Hibernate</span>
-          <span class="exp-tag">Spring</span>
-          <span class="exp-tag">Angular</span>
-          <span class="exp-tag">NgRx</span>
-          <span class="exp-tag">Python Web Scraping</span>
-        </div>
+        <p class="timeline-desc">Built a reusable email, SMS, and web notification service from scratch, including its database schema and a reusable Angular component.</p>
+        <a class="text-link timeline-link" href="/experience/clairvoyant/">What I worked on at Clairvoyant <span aria-hidden="true">&rarr;</span></a>
       </div>
-    </article>
-
-    <article class="experience-card">
-      <div class="experience-icon-col">
-        <div class="company-logo-badge persistent-badge" title="Persistent Systems">
-          {% include "icons/persistent.svg" %}
-        </div>
+    </li>
+    <li class="timeline-item">
+      <div class="timeline-logo" title="Persistent Systems">
+        {% include "icons/persistent.svg" %}
       </div>
-      <div class="experience-content">
-        <div class="experience-header">
-          <div>
-            <h3 class="experience-role-title">Software Engineer</h3>
-            <span class="experience-company-name">Persistent Systems &middot; Healthcare &amp; Enterprise Solutions</span>
+      <div class="timeline-content">
+        <div class="timeline-head">
+          <div class="timeline-title">
+            <h3 class="timeline-role">Software Engineer</h3>
+            <span class="timeline-company">Persistent Systems</span>
           </div>
-          <span class="experience-date-pill">Sep 2015 &mdash; Mar 2017</span>
+          <span class="timeline-dates">Sep 2015 &ndash; Mar 2017</span>
         </div>
-        <p class="experience-desc">Built a cancer-patient health survey Android application from scratch in close collaboration with the client; implemented push notification services, data persistence, and comprehensive unit/integration test suites using Java, Spring Boot, and Salesforce.</p>
-        <div class="experience-tags">
-          <span class="exp-tag">Java</span>
-          <span class="exp-tag">Spring Boot</span>
-          <span class="exp-tag">Android</span>
-          <span class="exp-tag">REST APIs</span>
-          <span class="exp-tag">Salesforce</span>
-        </div>
+        <p class="timeline-desc">Built a cancer-patient health survey Android app from scratch with the client, including push notifications, data persistence, and tests.</p>
+        <a class="text-link timeline-link" href="/experience/persistent/">What I worked on at Persistent Systems <span aria-hidden="true">&rarr;</span></a>
       </div>
-    </article>
-  </div>
+    </li>
+  </ol>
 </section>
 
-<section id="systems" class="section toolkit-section">
-  <div class="section-heading">
-    <div>
-      <span class="section-kicker">ENGINEERING DEPTH</span>
-      <h2>Systems &amp; Architecture Focus</h2>
+<section class="personal" id="programmer-cat">
+  <div class="personal-inner">
+    <div class="personal-mark" aria-hidden="true">
+      {% include "icons/programmercat.svg" %}
     </div>
-  </div>
-  <div class="toolkit-grid">
-    <div class="toolkit-card">
-      <h3 class="toolkit-title">OpenBanking &amp; Payment Rails</h3>
-      <p class="toolkit-desc">Architecting payment initiation, cross-border settlements (SEPA, Paidy, Boku), transactional idempotency, and regulatory compliance across global banking APIs.</p>
-    </div>
-    <div class="toolkit-card">
-      <h3 class="toolkit-title">Distributed Backend Systems</h3>
-      <p class="toolkit-desc">Designing event-driven streaming pipelines with Apache Kafka, scalable microservices with Java/Spring Boot and Python, and robust failure recovery patterns.</p>
-    </div>
-    <div class="toolkit-card">
-      <h3 class="toolkit-title">Architecture &amp; Reliability</h3>
-      <p class="toolkit-desc">API design, system performance profiling, automated integration test frameworks, and dependable high-throughput transaction processing.</p>
-    </div>
-  </div>
-</section>
-
-<section id="programmer-cat" class="section indie-section">
-  <div class="section-heading">
-    <div>
-      <span class="section-kicker">PERSONAL PROJECTS</span>
+    <div class="personal-copy">
       <h2>Programmer Cat</h2>
+      <p>My other personal website. I make small apps and tools out of interest, often when something annoys me. I share them there.</p>
+      <p class="personal-links">
+        <a class="text-link" href="https://programmercat.com" target="_blank" rel="noopener">Visit programmercat.com <span aria-hidden="true">&nearr;</span></a>
+      </p>
     </div>
-    <a class="solid-brand-btn" href="https://programmercat.com" target="_blank" rel="noopener">Visit programmercat.com <span aria-hidden="true">&nearr;</span></a>
-  </div>
-  <div class="indie-banner-card">
-    <div class="indie-banner-text">
-      <p>Alongside large-scale payment infrastructure, I design and build consumer apps and developer utilities as personal projects under the name <a href="https://programmercat.com" target="_blank" rel="noopener"><strong>Programmer Cat</strong></a>. From URL privacy and early education to AI code generation, these projects reflect my love for crafting useful, self-contained software.</p>
-    </div>
-    <div class="indie-banner-links">
-      <a class="indie-btn" href="https://programmercat.com" target="_blank" rel="noopener">Explore Apps on Programmer Cat &nearr;</a>
-      <a class="indie-btn secondary" href="/work/">View Architecture Case Studies &rarr;</a>
-    </div>
-  </div>
-  <div class="project-grid">
-    {% for project in collections.projects %}
-      {% if project.data.featured %}
-        {% include 'project-card.njk' %}
-      {% endif %}
-    {% endfor %}
   </div>
 </section>
 
-<section class="section writing-section">
-  <div class="section-heading">
-    <div>
-      <span class="section-kicker">FIELD NOTES</span>
-      <h2>Writing &amp; Technical Thoughts</h2>
-    </div>
-    <a class="text-link" href="/writing/">All writing <span aria-hidden="true">&rarr;</span></a>
+<section class="section">
+  <div class="section-head">
+    <h2>Posts</h2>
+    <a class="text-link" href="/posts/">All posts &rarr;</a>
   </div>
   <div class="post-list">
     {% for post in collections.posts %}
@@ -208,34 +124,9 @@ layout: layouts/base.njk
         {% include 'post-row.njk' %}
       {% endif %}
     {% else %}
-      <div class="writing-empty">
-        <p class="empty-heading">Notebook just opened.</p>
-        <p>Technical articles and notes on distributed systems, payment rails, and AI experimentation are in progress. Follow along via RSS.</p>
-        <a class="text-link" href="/feed.xml">Subscribe with RSS <span aria-hidden="true">&nearr;</span></a>
+      <div class="posts-empty">
+        <p>I haven&rsquo;t written any posts yet. When I do, they will be listed here.</p>
       </div>
     {% endfor %}
-  </div>
-</section>
-
-<section class="section contact-section">
-  <div class="section-heading">
-    <div>
-      <span class="section-kicker">CONNECT</span>
-      <h2>Get in Touch</h2>
-    </div>
-  </div>
-  <div class="contact-box">
-    <p>Always happy to discuss distributed systems, payment platforms, independent apps, or engineering leadership. Drop me an email or find me online:</p>
-    <div class="contact-methods">
-      <a class="contact-pill" href="mailto:{{ site.email }}">
-        {% include "icons/mail.svg" %} <span>{{ site.email }}</span>
-      </a>
-      <a class="contact-pill" href="{{ site.linkedin }}" target="_blank" rel="noopener">
-        {% include "icons/linkedin.svg" %} <span>LinkedIn</span>
-      </a>
-      <a class="contact-pill" href="{{ site.github }}" target="_blank" rel="noopener">
-        {% include "icons/github.svg" %} <span>GitHub</span>
-      </a>
-    </div>
   </div>
 </section>

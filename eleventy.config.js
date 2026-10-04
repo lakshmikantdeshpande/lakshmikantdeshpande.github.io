@@ -23,14 +23,9 @@ export default function (config) {
   );
   config.addCollection("posts", (collection) =>
     collection
-      .getFilteredByGlob("src/writing/*.md")
+      .getFilteredByGlob("src/posts/*.md")
       .filter((item) => !item.data.draft)
       .sort((a, b) => b.date - a.date),
-  );
-  config.addCollection("projects", (collection) =>
-    collection
-      .getFilteredByGlob("src/work/*.md")
-      .sort((a, b) => a.data.order - b.data.order),
   );
   config.addCollection("sitemap", (collection) =>
     collection
@@ -43,6 +38,17 @@ export default function (config) {
           item.data.sitemap !== false,
       ),
   );
+  // Keep tables semantic but let wide ones scroll inside their own region
+  // instead of widening the page.
+  config.addTransform("wrapTables", (content, outputPath) => {
+    if (typeof outputPath !== "string" || !outputPath.endsWith(".html"))
+      return content;
+    return content.replace(
+      /<table\b[^>]*>[\s\S]*?<\/table>/g,
+      (table) =>
+        `<div class="table-scroll" role="region" tabindex="0" aria-label="Table">${table}</div>`,
+    );
+  });
   return {
     dir: { input: "src", output: "_site" },
     markdownTemplateEngine: "njk",

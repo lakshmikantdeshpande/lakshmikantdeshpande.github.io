@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+---
+<div class="detail-heading">
+  <a class="back-link" href="/#experience">&larr; Experience</a>
+  <span class="eyebrow">{{ role }} / {{ dates }}</span>
+  <h1>{{ title }}</h1>
+  <p>{{ summary }}</p>
+</div>
+<article class="prose experience-prose">{{ content | safe }}</article>

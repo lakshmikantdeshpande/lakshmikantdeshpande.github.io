@@ -36,6 +36,22 @@ for (const file of pages) {
     `${file}: canonical`,
   );
   assert.match(html, /<main id="main"/, `${file}: skip target`);
+  assert.ok(
+    !html.includes("feed.xml"),
+    `${file}: no feed.xml references`,
+  );
+  assert.ok(
+    !html.includes("/writing/"),
+    `${file}: no /writing/ references`,
+  );
+  assert.ok(
+    !html.includes("/work/"),
+    `${file}: no project-notes references`,
+  );
+  assert.ok(
+    !/rel="alternate"[^>]*application\/atom\+xml/.test(html),
+    `${file}: no Atom alternate link`,
+  );
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
   assert.equal(ids.length, new Set(ids).size, `${file}: no duplicate IDs`);
   for (const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
@@ -60,10 +76,12 @@ for (const file of pages) {
 for (const name of [
   "index.html",
   "about/index.html",
-  "work/index.html",
-  "writing/index.html",
+  "posts/index.html",
+  "experience/paypal/index.html",
+  "experience/appzen/index.html",
+  "experience/clairvoyant/index.html",
+  "experience/persistent/index.html",
   "404.html",
-  "feed.xml",
   "sitemap.xml",
   "robots.txt",
   ".nojekyll",
@@ -74,6 +92,14 @@ for (const name of [
     `Expected generated file: ${name}`,
   );
 }
+assert.ok(
+  !files.includes(join(root, "feed.xml")),
+  "Feed output must not be generated.",
+);
+assert.ok(
+  !files.some((file) => /(^|\/)(writing|work|feed)(\/|\.|$)/.test(file.slice(root.length))),
+  "No /writing/, /work/, or feed output may be generated.",
+);
 assert.ok(
   !files.some((file) => /draft|fixture|content-drafts/.test(file)),
   "Drafts and test fixtures must not be published.",

@@ -3,10 +3,10 @@ export default {
   eleventyComputed: {
     permalink: (data) =>
       data.page.inputPath.endsWith("/index.njk")
-        ? "/writing/"
+        ? "/posts/"
         : data.draft
           ? false
-          : `/writing/${data.page.fileSlug}/`,
+          : `/posts/${data.page.fileSlug}/`,
     eleventyExcludeFromCollections: (data) => !!data.draft,
   },
 };

@@ -3,23 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f6f2">
+  <meta name="theme-color" content="#f7f2ea">
   <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
   <meta name="description" content="{{ description or site.description }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <meta property="og:type" content="{% if article %}article{% else %}website{% endif %}">
   <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}{{ site.name }}">
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:image" content="{{ site.url }}/assets/social-card.png">
-  <meta property="og:image:alt" content="Lakshmikant Deshpande — Senior Software Engineer &amp; Tech Lead">
+  <meta property="og:image:alt" content="Lakshmikant Deshpande, software engineer at PayPal. Personal site.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="alternate" type="application/atom+xml" title="{{ site.name }} — Writing" href="/feed.xml">
   <link rel="preload" href="/assets/fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/styles.css">
-  <script type="module" src="/assets/js/site.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -30,25 +28,17 @@
       </a>
       <nav aria-label="Main navigation">
         <a href="/about/" {% if section == 'about' %}aria-current="page"{% endif %}>About</a>
-        <a href="/work/" {% if section == 'work' %}aria-current="page"{% endif %}>Projects</a>
-        <a class="nav-external-link" href="https://programmercat.com" target="_blank" rel="noopener">Programmer Cat <span aria-hidden="true">&nearr;</span></a>
-        <a href="/writing/" {% if section == 'writing' %}aria-current="page"{% endif %}>Writing</a>
+        <a href="/posts/" {% if section == 'posts' %}aria-current="page"{% endif %}>Posts</a>
         <a href="mailto:{{ site.email }}">Contact</a>
       </nav>
     </header>
     <main id="main" tabindex="-1">{{ content | safe }}</main>
     <footer class="site-footer">
-      <div>
-        <a class="footer-name" href="/">Lakshmikant Deshpande</a>
-        <p>Senior Software Engineer &amp; Tech Lead &middot; Bengaluru, India</p>
-      </div>
-      <nav aria-label="Social links">
-        <a href="https://programmercat.com" target="_blank" rel="noopener">Programmer Cat <span aria-hidden="true">&nearr;</span></a>
+      <nav aria-label="Elsewhere">
         <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub <span aria-hidden="true">&nearr;</span></a>
         <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">&nearr;</span></a>
-        <a href="/feed.xml">RSS <span aria-hidden="true">&nearr;</span></a>
+        <a href="mailto:{{ site.email }}">Email</a>
       </nav>
-      <span class="copyright">&copy; {{ site.year }}</span>
     </footer>
   </div>
 </body>
